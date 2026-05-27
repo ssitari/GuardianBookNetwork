@@ -40,12 +40,11 @@ ballots[voter].push(book)
       })
     }
 
-    if (!nodesMap.has(book)) {
-      nodesMap.set(book, {
-        id: book,
-        type: "book"
-      })
-    }
+    nodesMap.set(book, {
+  id: book,
+  type: "book",
+  top100: row.top100 === "TRUE"
+})
 
     links.push({
       source: voter,
@@ -183,11 +182,22 @@ const simulation = d3.forceSimulation(nodes)
         ? radiusScale(d.votes)
         : 3
     )
-    .attr("fill", d =>
-      d.type === "book"
-        ? "#ff6b6b"
-        : "#4dabf7"
-    )
+    .attr("fill", d => {
+
+        if (d.type === "voter") {
+          return "#4dabf7"
+        }
+
+        return d.top100
+          ? "#ff4d6d"
+          : "#5c4a4d"
+      })
+      .attr("fill-opacity", d => {
+
+        if (d.type === "voter") return 0.8
+
+        return d.top100 ? 1 : 0.45
+      })
     .call(drag(simulation))
   .on("mouseover", highlight)
   .on("mouseout", resetHighlight)
