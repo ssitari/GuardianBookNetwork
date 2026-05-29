@@ -1,4 +1,4 @@
-##Guardian Top 100 Best Novels Network VIzualization
+## Guardian Top 100 Best Novels Network VIzualization
 
 After reading the [Guradian Top 100 Best Novels of All Time] (https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time) results, I stumbled across [Matthew Aldrege's blog entry](https://mpaldridge.github.io/blog/guardian-novels.html) where he reveals that he scraped the raw vote toals and cleaned upthe data.
 
