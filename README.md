@@ -1,6 +1,6 @@
 ## Guardian Top 100 Best Novels Network VIzualization
 
-After reading the [Guradian Top 100 Best Novels of All Time] (https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time) results, I stumbled across [Matthew Aldrege's blog entry](https://mpaldridge.github.io/blog/guardian-novels.html) where he reveals that he scraped the raw vote toals and cleaned upthe data.
+After reading the [Guradian Top 100 Best Novels of All Time](https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time) results, I stumbled across [Matthew Aldrege's blog entry](https://mpaldridge.github.io/blog/guardian-novels.html) where he reveals that he scraped the raw vote toals and cleaned upthe data.
 
 Since I have been using Claude to learn a little D3 I though the [voting table he published](https://github.com/mpaldridge/guardian-100-novels/blob/main/votes.csv) would make for a fun network vizualization.
 
