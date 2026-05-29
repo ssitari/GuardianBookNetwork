@@ -2,31 +2,318 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Guardian Books Network</title>
-
+  <title>The Guardian 100 Best Novels</title>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0d12;
+      --surface:  rgba(18, 18, 28, 0.94);
+      --border:   rgba(255,255,255,0.09);
+      --accent:   #e8c97a;
+      --pink:     #f06292;
+      --purple:   #b39ddb;
+      --blue:     #4dabf7;
+      --text:     #e0ddd8;
+      --muted:    #777;
+      --radius:   10px;
+    }
+
     body {
-      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, 'Times New Roman', serif;
       overflow: hidden;
-      background: #111;
-      color: white;
-      font-family: sans-serif;
     }
 
     svg {
       width: 100vw;
       height: 100vh;
+      display: block;
     }
 
     text {
-      fill: white;
+      fill: var(--text);
+      font-family: Georgia, serif;
       font-size: 10px;
       pointer-events: none;
     }
+
+    /* ── Panel ──────────────────────────────────────────────────────── */
+    #panel {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+      z-index: 100;
+      width: 240px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+      overflow: hidden;
+    }
+
+    #panel.collapsed #panel-body { display: none; }
+
+    #panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    #panel-header h1 {
+      font-size: 12.5px;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    #panelToggle {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0 2px;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    #panelToggle:hover { color: var(--text); }
+
+    #panel-body { padding: 13px 14px 14px; }
+
+    /* ── Dropdowns ──────────────────────────────────────────────────── */
+    .filter-group { margin-bottom: 9px; }
+
+    .filter-group label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .filter-group select {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-family: Georgia, serif;
+      font-size: 11.5px;
+      padding: 6px 8px;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23777'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 9px center;
+      padding-right: 26px;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .filter-group select:focus,
+    .filter-group select:hover {
+      border-color: rgba(232,201,122,0.35);
+      background-color: rgba(255,255,255,0.08);
+    }
+    .filter-group select option {
+      background: #1a1a2a;
+      color: var(--text);
+    }
+
+    /* ── Buttons row ────────────────────────────────────────────────── */
+    .btn-row {
+      display: flex;
+      gap: 7px;
+      margin-top: 12px;
+      margin-bottom: 14px;
+    }
+    .btn {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--muted);
+      font-family: Georgia, serif;
+      font-size: 10.5px;
+      letter-spacing: 0.04em;
+      padding: 6px 4px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-align: center;
+    }
+    .btn:hover { background: rgba(255,255,255,0.1); color: var(--text); }
+    .btn.accent { border-color: rgba(232,201,122,0.3); color: var(--accent); }
+    .btn.accent:hover { background: rgba(232,201,122,0.1); }
+
+    /* ── Legend ─────────────────────────────────────────────────────── */
+    .legend { border-top: 1px solid var(--border); padding-top: 11px; }
+
+    .legend-title {
+      font-size: 10px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 6px;
+      font-size: 11.5px;
+      color: var(--text);
+    }
+
+    .leg-dot {
+      flex-shrink: 0;
+      border-radius: 50%;
+    }
+
+    .leg-line {
+      flex-shrink: 0;
+      height: 2px;
+      width: 22px;
+      border-radius: 1px;
+    }
+
+    .leg-dashed {
+      flex-shrink: 0;
+      width: 22px;
+      height: 0;
+      border-top: 2px dashed #7b5ea7;
+    }
+
+    .legend-sub {
+      font-size: 9.5px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* ── Tooltip ────────────────────────────────────────────────────── */
+    .tt {
+      position: absolute;
+      pointer-events: none;
+      background: rgba(10,10,18,0.97);
+      border: 1px solid rgba(232,201,122,0.22);
+      border-radius: 8px;
+      padding: 10px 13px;
+      max-width: 230px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.65);
+      backdrop-filter: blur(8px);
+      z-index: 200;
+    }
+    .tt-title  { font-size: 13px; font-weight: bold; color: #fff; line-height: 1.35; margin-bottom: 3px; }
+    .tt-author { font-size: 11px; color: var(--muted); margin-bottom: 5px; font-style: italic; }
+    .tt-votes  { font-size: 11px; color: var(--accent); display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+    .tt-badge  {
+      background: var(--pink); color: #fff; font-size: 9px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: 4px; padding: 1px 5px;
+    }
+    .tt-voters { font-size: 10.5px; color: #aaa; line-height: 1.7; }
+    .tt-voter  { display: block; }
+    .tt-voter em { color: var(--muted); font-style: normal; font-size: 10px; }
+
+    /* ── Hint ───────────────────────────────────────────────────────── */
+    #hint {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.04em;
+      pointer-events: none;
+      z-index: 100;
+      white-space: nowrap;
+    }
   </style>
 </head>
-
 <body>
+
+<div id="panel">
+  <div id="panel-header">
+    <h1>The Guardian 100 Best Novels of All Time</h1>
+    <button id="panelToggle" title="Collapse">▾</button>
+  </div>
+  <div id="panel-body">
+
+    <div class="filter-group">
+      <label for="authorSelect">Filter by Author</label>
+      <select id="authorSelect">
+        <option value="">— All authors —</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="bookSelect">Filter by Book</label>
+      <select id="bookSelect">
+        <option value="">— All books —</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="voterSelect">Filter by Voter</label>
+      <select id="voterSelect">
+        <option value="">— All voters —</option>
+      </select>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn accent" id="clearFilter">Clear filter</button>
+      <button class="btn"        id="resetZoom">Reset zoom</button>
+    </div>
+
+    <div class="legend">
+      <div class="legend-title">Legend</div>
+
+      <div class="legend-item">
+        <div class="leg-dot" style="width:16px;height:16px;background:#fe9929;border:1.5px solid #cc6600;"></div>
+        <div>
+          <div>Top-100 novel</div>
+          <div class="legend-sub">Size = vote count</div>
+        </div>
+      </div>
+
+      <div class="legend-item">
+        <div class="leg-dot" style="width:11px;height:11px;background:#ffffd4;border:1px solid #cccc88;opacity:0.8;"></div>
+        <div>Other vote getting novel</div>
+      </div>
+
+      <div class="legend-item">
+        <div class="leg-dot" style="width:7px;height:7px;background:#4dabf7;"></div>
+        <div>Voter</div>
+      </div>
+
+      <div class="legend-item" style="margin-top:6px;">
+        <div class="leg-line" style="background:#e8c97a;"></div>
+        <div>Top-3 vote</div>
+      </div>
+
+      <div class="legend-item">
+        <div class="leg-line" style="background:#555;"></div>
+        <div>Other vote</div>
+      </div>
+
+      <div class="legend-item">
+        <div class="leg-dashed"></div>
+        <div>Co-occurrence (≥8 ballots)</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="hint">Scroll to zoom · Drag to pan · Click a node to focus</div>
 
 <svg></svg>
 
