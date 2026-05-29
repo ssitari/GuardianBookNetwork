@@ -16,4 +16,4 @@ Aldridge, M. (2026, May 17). Guardian 100 best novels (stats and errors). Matthe
 
 Original Guardian story:
 
-voted, A., O’Brien, F., Wishart, E., Clarke, S., Lev, P., Cousins, R., Richards, T., Ainslie, B., Amitrano, A., Fischer, H., Herman, T., & Hoyland, L. (2026, May 16). The 100 best novels of all time. The Guardian. https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time
+The Guardian. (2026, May 16). The 100 best novels of all time. https://www.theguardian.com/books/ng-interactive/2026/may/16/story-behind-100-best-novels-all-time
