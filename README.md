@@ -1,4 +1,4 @@
-## Guardian Top 100 Best Novels Network VIzualization
+## Guardian Top 100 Best Novels Network Vizualization
 
 After reading the [Guradian Top 100 Best Novels of All Time](https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time) results, I stumbled across [Matthew Aldrege's blog entry](https://mpaldridge.github.io/blog/guardian-novels.html) where he reveals that he scraped the raw vote toals and cleaned upthe data.
 
@@ -11,7 +11,9 @@ I published the results through [Github Pages](https://ecg2104.github.io/Guardia
 The network graphic was constructed using voter data compiled by [Matthew Aldridge](https://github.com/mpaldridge) from his [guardian-100-novels](https://github.com/mpaldridge/guardian-100-novels) repository.
 
 Also see his blog:
+
 Aldridge, M. (2026, May 17). Guardian 100 best novels (stats and errors). Matthew Aldridge. https://mpaldridge.github.io/blog/guardian-novels.html
 
 Original Guardian story:
+
 voted, A., O’Brien, F., Wishart, E., Clarke, S., Lev, P., Cousins, R., Richards, T., Ainslie, B., Amitrano, A., Fischer, H., Herman, T., & Hoyland, L. (2026, May 16). The 100 best novels of all time. The Guardian. https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time
