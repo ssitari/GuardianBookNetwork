@@ -26,4 +26,4 @@ The Guardian. (2026, May 16). The 100 best novels of all time. https://www.thegu
 
 Built with the JavaScript library D3.js.
 
-Portions of the JavaScript and CSS were developed with assistance from CLaude
+Portions of the JavaScript and CSS were developed with assistance from Claude
