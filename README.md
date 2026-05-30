@@ -1,10 +1,12 @@
 ## Guardian Top 100 Best Novels Network Vizualization
 
-After reading the [Guradian Top 100 Best Novels of All Time](https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time) results, I stumbled across [Matthew Aldrege's blog entry](https://mpaldridge.github.io/blog/guardian-novels.html) where he reveals that he scraped the raw vote toals and cleaned upthe data.
+After reading the [Guardian Top 100 Best Novels of All Time](https://www.theguardian.com/books/ng-interactive/2026/may/12/the-100-best-novels-of-all-time) results, I stumbled across [Matthew Aldridge's blog entry](https://mpaldridge.github.io/blog/guardian-novels.html) where he reveals that he scraped the raw vote totals and cleaned up the voting data.
 
-Since I have been using Claude to learn a little D3 I thought the [voting table he published](https://github.com/mpaldridge/guardian-100-novels/blob/main/votes.csv) would make for a fun network vizualization.
+Since I have been using Claude to learn a little D3 I thought the [voting table he published](https://github.com/mpaldridge/guardian-100-novels/blob/main/votes.csv) would make for a fun network visualization.
 
 I published the results through [Github Pages](https://ecg2104.github.io/GuardianBookNetwork/)
+
+Nodes represent all novels receiving a vote and are connected to nodes representing voters.  The size of novel nodes is scaled by the book's vote total.  All edges represent a single vote.  There is a weighting by vote position so that voters should be drawn towards the novels they rate most highly.  Thus, voters with relatively orthodox ballots and novels with higher vote scores will have a more central location.  Voters with more unorthodox votes will be more peripherally located, as will novels with few votes.  Novels that got multiple votes, but from voters with otherwise unorthodox ballots may be pulled mor peripherally as well.  Hovering over a node will foreground all edges and node relations as will selecting a voter or novel node from the pull down menus.  There is also an author menu that will highlight all novels and votes for that writer.
 
 
 ## Acknowledgements
@@ -21,3 +23,7 @@ Aldridge, M. (2026, May 17). Guardian 100 best novels (stats and errors). Matthe
 Original Guardian story:
 
 The Guardian. (2026, May 16). The 100 best novels of all time. https://www.theguardian.com/books/ng-interactive/2026/may/16/story-behind-100-best-novels-all-time
+
+Built with the JavaScript library D3.js.
+
+Portions of the JavaScript and CSS were developed with assistance from CLaude
