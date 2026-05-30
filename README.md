@@ -10,6 +10,10 @@ I published the results through [Github Pages](https://ecg2104.github.io/Guardia
 ## Acknowledgements
 The network graphic was constructed using voter data compiled by [Matthew Aldridge](https://github.com/mpaldridge) from his [guardian-100-novels](https://github.com/mpaldridge/guardian-100-novels) repository.
 
+Original dataset licensed under Apache License 2.0.
+
+Modifications: I edited and reformated the Author names so they could be displayed and sorted by surname and added an indicator for topp 100 status.
+
 Also see his blog:
 
 Aldridge, M. (2026, May 17). Guardian 100 best novels (stats and errors). Matthew Aldridge. https://mpaldridge.github.io/blog/guardian-novels.html
