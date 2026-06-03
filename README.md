@@ -6,7 +6,7 @@ Since I have been using Claude to learn a little D3 I thought the [voting table 
 
 I published the results through [Github Pages](https://ecg2104.github.io/GuardianBookNetwork/)
 
-Nodes represent all novels receiving a vote and are connected to nodes representing voters.  The size of novel nodes is scaled by the book's vote total.  All edges represent a single vote.  There is a weighting by vote position so that voters should be drawn towards the novels they rate most highly.  Thus, voters with relatively orthodox ballots and novels with higher vote scores will have a more central location.  Voters with more unorthodox votes will be more peripherally located, as will novels with few votes.  Novels that got multiple votes, but from voters with otherwise unorthodox ballots may be pulled mor peripherally as well.  Hovering over a node will foreground all edges and node relations as will selecting a voter or novel node from the pull down menus.  There is also an author menu that will highlight all novels and votes for that writer.
+In the article 172 writers and critics submitted ballots ranking 10 novels as "greatest."  The Guardian ranked only the top 100 novels, however Aldridge's list tabulates scores for all 683 novels that received a vote and I include all here.  In the graph, nodes represent all novels receiving a vote and are connected to nodes representing any voter who cast a ballot for it.  The size of novel nodes is scaled by the book's vote total.  All edges represent a single vote, but there is a weighting by vote position so that voters should be drawn towards the novels they rate most highly.  Thus, voters with relatively orthodox ballots and novels with higher vote scores will have a more central location.  Voters with more unorthodox votes will be more peripherally located, as will novels with few votes.  Novels that got multiple votes, but from voters with otherwise unorthodox ballots may be pulled more peripherally as well.  Hovering over a node will foreground all edges and node relations as will selecting a voter or novel node from the pull down menus.  There is also an author menu that will highlight all novels and votes for that writer.
 
 
 ## Acknowledgements
@@ -26,4 +26,4 @@ The Guardian. (2026, May 16). The 100 best novels of all time. https://www.thegu
 
 Built with the JavaScript library D3.js.
 
-Portions of the JavaScript and CSS were developed with assistance from Claude
+Portions of the JavaScript and CSS were developed with assistance from the Claude chatbot
