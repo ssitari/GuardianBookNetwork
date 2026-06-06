@@ -4,7 +4,7 @@ After reading the [Guardian Top 100 Best Novels of All Time](https://www.theguar
 
 Built with [D3.js](https://d3js.org). No build step required — plain HTML, CSS, and ES modules.
 
-[View on GitHub Pages](https://ecg2104.github.io/GuardianBookNetwork/)
+[View on GitHub Pages](https://ssitari.github.io/GuardianBookNetwork/)
 
 ---
 
