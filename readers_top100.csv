@@ -1,0 +1,101 @@
+readers_rank,title,author,critics_status
+100,A Dance to the Music of Time,"Powell, Anthony",critics_vote
+93,A Little Life,"Yanagihara, Hanya",critics_vote
+93,All the Light We Cannot See,"Doerr, Anthony",new
+93,Animal Farm,"Orwell, George",critics_vote
+93,Love in the Time of Cholera,"García Márquez, Gabriel",critics_vote
+93,Mrs Dalloway,"Woolf, Virginia",critics_top100
+93,Of Human Bondage,"Maugham, W. Somerset",new
+93,The Magus,"Fowles, John",new
+93,The Picture of Dorian Gray,"Wilde, Oscar",critics_vote
+93,The Plague,"Camus, Albert",critics_vote
+93,The Red and the Black,Stendhal,critics_vote
+93,The Road,"McCarthy, Cormac",critics_top100
+93,The Stand,"King, Stephen",critics_vote
+80,"Absalom, Absalom!","Faulkner, William",new
+80,Dune,"Herbert, Frank",new
+80,For Whom the Bell Tolls,"Hemingway, Ernest",new
+80,Jonathan Strange & Mr. Norrell,"Clarke, Susanna",critics_vote
+80,Memoirs of Hadrian,"Yourcenar, Marguerite",critics_vote
+80,Tess of the D'urbervilles,"Hardy, Thomas",critics_vote
+80,"The Life and Opinions of Tristram Shandy, Gentleman","Sterne, Laurence",critics_top100
+80,The Name of the Rose,"Eco, Umberto",critics_vote
+75,Brave New World,"Huxley, Aldous",new
+75,Brideshead Revisited,"Waugh, Evelyn",critics_vote
+75,The Old Man and the Sea,"Hemingway, Ernest",new
+75,The Sun Also Rises,"Hemingway, Ernest",critics_vote
+75,Tinker Tailor Soldier Spy,"Carré, John le",new
+73,On the Road,"Kerouac, Jack",critics_vote
+73,The Unbearable Lightness of Being,"Kundera, Milan",critics_vote
+70,Piranesi,"Clarke, Susanna",critics_vote
+70,The Dispossessed,"Le Guin, Ursula K.",critics_vote
+70,To the Lighthouse,"Woolf, Virginia",critics_top100
+63,Demon Copperhead,"Kingsolver, Barbara",critics_vote
+63,Germinal,"Zola, Émile",critics_vote
+63,Madame Bovary,"Flaubert, Gustave",critics_top100
+63,My Brilliant Friend,"Ferrante, Elena",critics_top100
+63,Rebecca,"Maurier, Daphne du",critics_top100
+63,The Outsider,"Camus, Albert",critics_top100
+63,The Tin Drum,"Grass, Günter",critics_vote
+62,Midnight's Children,"Rushdie, Salman",critics_top100
+60,A Gentleman in Moscow,"Towles, Amor",new
+60,Possession,"Byatt, A. S.",critics_vote
+57,2666,"Bolaño, Roberto",critics_vote
+57,Cloud Atlas,"Mitchell, David",critics_vote
+57,Never Let Me Go,"Ishiguro, Kazuo",critics_top100
+52,Birdsong,"Faulks, Sebastian",new
+52,Emma,"Austen, Jane",critics_top100
+52,Lonesome Dove,"McMurtry, Larry",critics_vote
+52,The God of Small Things,"Roy, Arundhati",critics_top100
+52,The Magic Mountain,"Mann, Thomas",critics_top100
+49,A Tale of Two Cities,"Dickens, Charles",new
+49,Atonement,"McEwan, Ian",critics_vote
+49,David Copperfield,"Dickens, Charles",critics_top100
+46,Lolita,"Nabokov, Vladimir",critics_top100
+46,The Hitch Hiker's Guide to the Galaxy,"Adams, Douglas",critics_vote
+46,Watership Down,"Adams, Richard",critics_vote
+41,A Fine Balance,"Mistry, Rohinton",critics_top100
+41,A Suitable Boy,"Seth, Vikram",critics_vote
+41,Heart of Darkness,"Conrad, Joseph",critics_top100
+41,The Handmaid's Tale,"Atwood, Margaret",critics_top100
+41,The Secret History,"Tartt, Donna",critics_vote
+39,Frankenstein,"Shelley, Mary",critics_top100
+39,Stoner,"Williams, John",new
+37,A Prayer for Owen Meany,"Irving, John",critics_vote
+37,The Catcher in the Rye,"Salinger, J. D.",critics_vote
+36,The Count of Monte Cristo,"Dumas, Alexandre",critics_vote
+35,A Confederacy of Dunces,"Toole, John Kennedy",new
+31,Infinite Jest,"Wallace, David Foster",critics_vote
+31,The Master and Margarita,"Bulgakov, Mikhail",critics_top100
+31,The Poisonwood Bible,"Kingsolver, Barbara",critics_vote
+31,The Remains of the Day,"Ishiguro, Kazuo",critics_top100
+29,Huckleberry Finn,"Twain, Mark",critics_vote
+29,Great Expectations,"Dickens, Charles",critics_top100
+28,Blood Meridian,"McCarthy, Cormac",critics_top100
+26,Bleak House,"Dickens, Charles",critics_top100
+26,Jane Eyre,"Brontë, Charlotte",critics_top100
+25,Crime and Punishment,"Dostoevsky, Fyodor",critics_top100
+24,Les Misérables,"Hugo, Victor",critics_vote
+23,Don Quixote,"Cervantes, Miguel de",critics_top100
+21,Slaughterhouse-Five,"Vonnegut, Kurt",critics_vote
+21,The Brothers Karamazov,"Dostoevsky, Fyodor",critics_top100
+20,Beloved,"Morrison, Toni",critics_top100
+19,Gravity's Rainbow,"Pynchon, Thomas",critics_vote
+16,East of Eden,"Steinbeck, John",critics_vote
+16,Persuasion,"Austen, Jane",critics_top100
+16,The Great Gatsby,"Fitzgerald, F. Scott",critics_top100
+15,In Search of Lost Time,"Proust, Marcel",critics_top100
+14,Wolf Hall,"Mantel, Hilary",critics_top100
+14,Wuthering Heights,"Brontë, Emily",critics_top100
+12,Moby-Dick,"Melville, Herman",critics_top100
+11,Anna Karenina,"Tolstoy, Leo",critics_top100
+10,Ulysses,"Joyce, James",critics_top100
+8,Catch-22,"Heller, Joseph",critics_top100
+8,One Hundred Years of Solitude,"García Márquez, Gabriel",critics_top100
+7,Nineteen Eighty-Four,"Orwell, George",critics_top100
+6,War and Peace,"Tolstoy, Leo",critics_top100
+5,To Kill a Mockingbird,"Lee, Harper",critics_vote
+4,The Grapes of Wrath,"Steinbeck, John",critics_vote
+3,Pride and Prejudice,"Austen, Jane",critics_top100
+2,Middlemarch,"Eliot, George",critics_top100
+1,The Lord of the Rings,"Tolkien, J.R.R.",critics_vote
